@@ -20,6 +20,7 @@ class View(object):
         myshow = Window_show()
         myshow.setWindowTitle('名人名言显示')
         myshow.textBrowser.setText(Str_show)
+        myshow.pushButton.clicked.connect(app.quit)
         myshow.show()
         sys.exit(app.exec_())
 
@@ -33,12 +34,20 @@ class View(object):
         myshow = Window_show()
         myshow.setWindowTitle('错误提示')
         myshow.textBrowser.setText(Str_show)
+        myshow.pushButton.clicked.connect(app.quit)
         myshow.show()
         sys.exit(app.exec_())
 
     def select_quote(self):
         '''读取用户的选择'''
-        return input("请输入编号进行查询:")
+        # return input("请输入编号进行查询:")
+
+        # app = QtWidgets.QApplication(sys.argv)
+        # myshow = Window_show()
+        # myshow.setWindowTitle('名人名言查询')
+        # myshow.pushButton.clicked.connect(app.quit)
+        # myshow.show()
+        # sys.exit(app.exec_())
 
 class Window_show(QtWidgets.QWidget, Ui_Show):
     def __init__(self):

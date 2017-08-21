@@ -7,7 +7,6 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import sys
 
 class Ui_Show(object):
     def setupUi(self, Output):
@@ -34,7 +33,9 @@ class Ui_Show(object):
         Output.setWindowTitle(_translate("Output", "Dialog"))
         self.pushButton.setText(_translate("Output", "确定"))
 
+
 if __name__=="__main__":
+    import sys
     app=QtWidgets.QApplication(sys.argv)
     widget=QtWidgets.QWidget()
     ui=Ui_Show()
