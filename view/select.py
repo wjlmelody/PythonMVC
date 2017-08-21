@@ -37,12 +37,20 @@ class Ui_Select(object):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+        self.pushButton.clicked.connect(self.btnClick)
+
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.label.setText(_translate("Dialog", "请输入编号进行查询"))
         self.pushButton.setText(_translate("Dialog", "查询"))
         self.lineEdit.setValidator(QRegExpValidator(QRegExp(r"[0-9]+")))
+
+    def btnClick(self, Dialog):
+        quit()
+
+    def getlineEditText(self):
+        return self.lineEdit.text()
 
 if __name__=="__main__":
     import sys
