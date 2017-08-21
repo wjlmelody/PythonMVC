@@ -1,1 +1,1 @@
-__all__ = ['controller']
+__all__ = ['Controller']

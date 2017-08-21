@@ -1,6 +1,6 @@
 # _*_coding:utf-8
 '''主程序'''
-from controller.controller import Controller
+from controller.Controller import Controller
 
 def mains():
     while True:

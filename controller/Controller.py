@@ -1,6 +1,6 @@
 # _*_coding:utf-8
-from model.model import Model
-from view import View
+from model.Model import Model
+from view.View import View
 
 class Controller(object):
     '''控制器层'''
@@ -16,4 +16,4 @@ class Controller(object):
             quote = self.model.get_quote(index)
             self.view.show(quote)
         except ValueError as err:
-            self.view.error('不合法的索引值')
+            self.view.error('索引值不合法')

@@ -1,5 +1,5 @@
 # _*_coding:utf-8
-from database.database import *  # 导入数据
+from database.Database import *  # 导入数据
 
 
 class Model(object):
@@ -12,5 +12,5 @@ class Model(object):
         try:
             valve = Arrays[index]
         except IndexError as err:
-            valve = 'Not Found!'
+            valve = '未找到该名人名言'
         return valve
