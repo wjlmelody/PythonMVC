@@ -7,11 +7,13 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import QRegExp
+from PyQt5.QtCore import QRegExp, QCoreApplication
 from PyQt5.QtGui import QRegExpValidator
 
 
 class Ui_Select(object):
+    # _signal = QtCore.pyqtSignal(str)
+
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(401, 100)
@@ -37,8 +39,6 @@ class Ui_Select(object):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
-        self.pushButton.clicked.connect(self.btnClick)
-
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
@@ -46,11 +46,13 @@ class Ui_Select(object):
         self.pushButton.setText(_translate("Dialog", "查询"))
         self.lineEdit.setValidator(QRegExpValidator(QRegExp(r"[0-9]+")))
 
-    def btnClick(self, Dialog):
-        quit()
 
-    def getlineEditText(self):
-        return self.lineEdit.text()
+    @QtCore.pyqtSlot()
+    def setValue_NoParameters(self):
+        '''无参数槽方法'''
+        pass
+
+
 
 if __name__=="__main__":
     import sys
