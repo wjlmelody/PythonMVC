@@ -1,7 +1,6 @@
 # _*_coding:utf-8
 from database.Database import *  # 导入数据
 
-
 class Model(object):
     '''模型层'''
 
